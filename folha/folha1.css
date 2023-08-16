@@ -6,6 +6,23 @@ body{
 
 }
 
+.texto{
+    width: 280px;
+    color: white;
+    background-color: #8D191C;
+    display: flex;
+    font-size: small;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin-top: 7em;
+    margin-left: 40px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
 h2{
     display: flex;
     flex-direction: column;
@@ -16,13 +33,6 @@ h2{
     
 }
 
-h3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
 
 button{
     width: 150px;
