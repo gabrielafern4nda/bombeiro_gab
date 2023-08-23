@@ -1,37 +1,31 @@
-body{
+body {
     background-color: #f8e9ed;
     font-family: 'Montserrat', sans-serif;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     margin: 0;
 }
 
-.unico{
-    margin-top: 3em;
-}
-
-.tudo{
-    width: 250px;
+.texto {
+    width: 220px;
+    height: 30px;
     color: white;
     background-color: #8D191C;
-    font-size: large;
+    display: flex;
+    font-size: small;
+    font-weight: bolder;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px; 
+    padding: 0.5em;
 }
 
-.forms{
-    font-size: larger;
-    
-    margin-top: 1em; 
-    text-align: center;
-}
-
-button{
+button {
     width: 180px;
-    font-size: large;
+    font-size:medium;
     background-color: #8D191C;
     border: none;
     color: white;
@@ -43,6 +37,6 @@ button{
     justify-content: center;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: 2em;
-    margin-top: -7em;
+    margin-left: 1em;
+    margin-top: 2em;
 }
