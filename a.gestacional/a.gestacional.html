@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="a.gestacional.css">
     <title>Anamnese Gestacional</title>
@@ -20,31 +18,38 @@
         Período da gestação <br>
         <input type="text" name="total" maxlength="500" class="total">
         <br> <br>
+
         Fez pré-natal? <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">sim</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">não</label><br>
-        <br>
-        Nome do médico <br>
-        <input type="text" name="total" maxlength="500" class="total">
-        <br> <br>
+        <input type="radio" id="opcao1" name="opcao"> <label for="resposta1">sim</label><br>
+        <input type="radio" id="opcao1" name="opcao"> <label for="resposta1">não</label><br>
+
+        <div class="campo-texto-adicional" id="opcao1-adicional">
+            Nome do médico:
+            <input type="text" id="texto-adicional" name="total" maxlength="50" class="total">
+        </div> <br>
         Existe possibilidade de complicações? <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">sim</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">não</label><br>
+        <input type="radio" id="opcao1" name="opcao"> <label for="resposta1">sim</label><br>
+        <input type="radio" id="opcao1" name="opcao"> <label for="resposta1">não</label><br>
         <br>
         É o primeiro filho? <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">sim</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">não</label><br>
-        <br>
-        Quantos? <br>
-        <input type="text" name="total" maxlength="300" class="total">
+        <input type="radio" name="opcao2" id="opcao2_sim">
+        <label for="opcao2_sim">sim</label> <br>
+
+        <input type="radio" name="opcao2" id="opcao2_nao">
+        <label for="opcao2_nao">não</label>
+
+        <div class="campo-texto-adicional" id="opcao2-adicional">
+            Quantos?
+            <input type="text" id="texto-adicional" name="total" maxlength="50" class="total">
+        </div>
         <br> <br>
         Que horas iniciaram as contrações? <br>
         <input type="text" name="total" maxlength="10" class="total">
-        <br> <br> <br>
+        <br> <br> 
 
-        <button type="submit">Próximo</button>
 
-    </form>
 </body>
+
+<script src="script.js"></script>
 
 </html>
