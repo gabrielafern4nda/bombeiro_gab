@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <html lang="pt-br">
+<head>
+    <title>Exemplo de Campo de Texto Dinâmico</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <form method="post">
+        <div class="texto">
+            <h2>Anamnese Gestacional</h2>
+        </div>
+        <br> <br> <br>
+
+        Período da gestação <br>
+        <input type="text" name="total" maxlength="500" class="total">
+        <br> <br>
+
+        Fez pré-natal? <br>
+        <label>
+            <input type="radio" name="opcao1" onclick="mostrarCampoTexto('campoTexto1')"> sim
+        </label> 
+        <br>
+
+        <label>
+            <input type="radio" name="opcao1" onclick="mostrarCampoTexto('campoTexto1')"> nao
+        </label>
+        <br>
+
+        <div id="campoTexto1" style="display:none;">
+            Nome do médico
+            <input type="text" id="texto-adicional1" name="total" maxlength="50" class="total">
+        </div>
+        <br>
+        Existe possibilidade de complicações? <br>
+        <input type="radio" id="opcao2" name="opcao2"> <label for="opcao2">sim</label><br>
+        <input type="radio" id="opcao3" name="opcao2"> <label for="opcao3">não</label><br>
+        <br>
+
+        É o primeiro filho? <br>
+        <label>
+            <input type="radio" name="opcao3" onclick="mostrarCampoTexto('campoTexto2')"> sim
+        </label>
+        <br>
+
+        <label>
+            <input type="radio" name="opcao3" onclick="mostrarCampoTexto('campoTexto2')"> nao
+        </label>
+
+        <div id="campoTexto2" style="display:none;">
+            Quantos?
+            <input type="text" id="texto-adicional2" name="total" maxlength="50" class="total">
+        </div>
+        <br> <br>
+        Que horas iniciaram as contrações? <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> <br>
+        Tempo das contrações:<br> <br>
+        <div class="sub">
+        Duração: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+        Intervalo: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        </div>
+        <br> <br> 
+
+
+    </form>
+
+    <script>
+        function mostrarCampoTexto(campoID) {
+            var campoTexto = document.getElementById(campoID);
+
+            if (campoTexto.style.display === "none") {
+                campoTexto.style.display = "block";
+            } else {
+                campoTexto.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
