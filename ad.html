@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ad.css">
+    <title>Seleção de Opção</title>
+</head>
+<body>
+    <form>
+
+        <div class="texto">
+            <h2>Anamnese de Emergencia Medica</h2>
+        </div> <br> <br> 
+
+        Período da gestação: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+
+        <label>Fez pré-natal?</label><br>
+        <label for="sim">Sim</label>
+        <input type="radio" name="opcao1" id="sim" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
+        <br>
+        <label for="nao">Não</label>
+        <input type="radio" name="opcao1" id="nao" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
+        <br>
+        <div id="textoAdicional1" style="display:none">
+            <label for="textoAdicional">Nome do médico:</label>
+            <input type="text" id="textoAdicional" name="textoAdicional1" class="total">
+        </div> <br>
+
+
+        Existe possibilidade de complicações? <br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
+        <br>
+
+
+        <label>É o primeiro filho?</label><br>
+        <label for="opcaoSim2">Sim</label>
+        <input type="radio" name="opcao2" id="opcaoSim2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
+        <br>
+        <label for="opcaoNao2">Não</label>
+        <input type="radio" name="opcao2" id="opcaoNao2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
+        <br>
+        <div id="textoAdicional2" style="display:none">
+            <label for="textoAdicional">Quantos?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional2" class="total">
+        </div> <br>
+
+        Que horas iniciaram as contrações? <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+        Tempo das contrações:<br> <br>
+        <div class="sub">
+        Duração: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+        Intervalo: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        </div>
+
+        Sente pressão na região do quadril ou vontade de evacuar? <br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
+        <br>
+
+        Já houve ruptura da bolsa? <br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
+        <br>
+
+        Foi feito inspeção visual? <br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
+        <br>
+
+        <label>Parto realizado?</label><br>
+        <label for="opcaoSim3">Sim</label>
+        <input type="radio" name="opcao3" id="opcaoSim3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
+        <br>
+        <label for="opcaoNao3">Não</label>
+        <input type="radio" name="opcao3" id="opcaoNao3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
+        <br>
+        <div id="textoAdicional3" style="display:none">
+            <label for="textoAdicional">Hora do nascimento:</label>
+            <input type="text" id="textoAdicional" name="textoAdicional3" class="total">
+        </div> <br>
+
+        Sexo do bebê <br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Feminino</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Masculino</label><br>
+        <br>
+
+        Nome do bebê: <br>
+        <input type="text" name="total" maxlength="500" class="total">
+        <br> <br> 
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
