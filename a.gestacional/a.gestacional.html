@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <title>Anamnese Gestacional</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="a.gestacional.css">
+    <title>Anamnese Gestacional</title>
 </head>
 <body>
+
+    <div class="cabecalho">
+        <img src="menu.png" width="350px" class="menu">
+    </div>
+    
+
     <form method="post">
+        <br> <br> <br> <br> <br>
         <div class="texto">
             <h2>Anamnese Gestacional</h2>
-        </div>
-        <br> <br> <br>
+        </div> <br> 
 
         Período da gestação: <br>
-        <input type="text" name="total" maxlength="500" class="total">
-        <br> <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
 
-        Fez pré-natal? <br>
-        <label>
-            <input type="radio" name="opcao1" onclick="mostrarCampoTexto('campoTexto1')"> sim
-        </label> 
+        <label>Fez pré-natal?</label><br>
+        <label for="sim">Sim</label>
+        <input type="radio" name="opcao1" id="sim" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
         <br>
-        <label>
-            <input type="radio" name="opcao1" onclick="mostrarCampoTexto('campoTexto1')"> nao
-        </label>
+        <label for="nao">Não</label>
+        <input type="radio" name="opcao1" id="nao" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
         <br>
+        <div id="textoAdicional1" style="display:none">
+            <label for="textoAdicional">Nome do médico:</label>
+            <input type="text" id="textoAdicional" name="textoAdicional1" class="total">
+        </div> <br>
 
-        <div id="campoTexto1" style="display:none;">
-            Nome do médico
-            <input type="text" id="texto-adicional1" name="total" maxlength="50" class="total">
-        </div>
-        <br>
         Existe possibilidade de complicações? <br>
-        <input type="radio" id="opcao" name="opcao"> <label for="opcao">sim</label><br>
-        <input type="radio" id="opcao" name="opcao"> <label for="opcao">não</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
         <br>
 
-        É o primeiro filho? <br>
-        <label>
-            <input type="radio" name="opcao2" onclick="mostrarCampoTexto('campoTexto2')"> sim
-        </label>
+        <label>É o primeiro filho?</label><br>
+        <label for="opcaoSim2">Sim</label>
+        <input type="radio" name="opcao2" id="opcaoSim2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
         <br>
-        <label>
-            <input type="radio" name="opcao2" onclick="mostrarCampoTexto('campoTexto2')"> não
-        </label>
-
-        <div id="campoTexto2" style="display:none;">
-            Quantos?
-            <input type="text" id="texto-adicional2" name="total" maxlength="50" class="total">
-        </div>
-        <br> <br>
+        <label for="opcaoNao2">Não</label>
+        <input type="radio" name="opcao2" id="opcaoNao2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
+        <br>
+        <div id="textoAdicional2" style="display:none">
+            <label for="textoAdicional">Quantos?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional2" class="total">
+        </div> <br>
 
         Que horas iniciaram as contrações? <br>
         <input type="text" name="total" maxlength="10" class="total">
-        <br> <br> <br>
+        <br> <br> 
         Tempo das contrações:<br> <br>
         <div class="sub">
         Duração: <br>
@@ -62,59 +63,46 @@
         Intervalo: <br>
         <input type="text" name="total" maxlength="10" class="total">
         </div>
-        <br> <br> 
 
         Sente pressão na região do quadril ou vontade de evacuar? <br>
-        <input type="radio" id="opcao" name="opcao"> <label for="opcao">sim</label><br>
-        <input type="radio" id="opcao" name="opcao"> <label for="opcao">não</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
         <br>
 
         Já houve ruptura da bolsa? <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">sim</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">não</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
         <br>
 
         Foi feito inspeção visual? <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">sim</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">não</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Sim</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Não</label><br>
         <br>
 
-        Parto realizado? <br>
-        <label>
-            <input type="radio" name="opcao4" onclick="mostrarCampoTexto('campoTexto3')"> sim
-        </label>
+        <label>Parto realizado?</label><br>
+        <label for="opcaoSim3">Sim</label>
+        <input type="radio" name="opcao3" id="opcaoSim3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
         <br>
-        <label>
-            <input type="radio" name="opcao4" onclick="mostrarCampoTexto('campoTexto3')"> não
-        </label>
-        <br> <br>
-
-        <div id="campoTexto3" style="display:none;">
-            Hora do nascimento:
-            <input type="text" id="texto-adicional3" name="total" maxlength="50" class="total">
-        </div> 
+        <label for="opcaoNao3">Não</label>
+        <input type="radio" name="opcao3" id="opcaoNao3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
+        <br>
+        <div id="textoAdicional3" style="display:none">
+            <label for="textoAdicional">Hora do nascimento:</label>
+            <input type="text" id="textoAdicional" name="textoAdicional3" class="total">
+        </div> <br>
 
         Sexo do bebê <br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">feminino</label><br>
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">masculino</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Feminino</label><br>
+        <input type="radio" id="ad" name="ad"> <label for="ad">Masculino</label><br>
         <br>
 
         Nome do bebê: <br>
         <input type="text" name="total" maxlength="500" class="total">
         <br> <br> 
 
+        <button type="submit">Próximo</button>
+
     </form>
-
-    <script>
-        function mostrarCampoTexto(campoID) {
-            var campoTexto = document.getElementById(campoID);
-
-            if (campoTexto.style.display === "none") {
-                campoTexto.style.display = "block";
-            } else {
-                campoTexto.style.display = "none";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

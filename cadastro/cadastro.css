@@ -37,10 +37,9 @@
     
 }
 
-form {
+.formCadastro {
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
 }
 
 h2{
@@ -52,19 +51,42 @@ h2{
 
 }
 
-.tudo{
+.email{
     border-radius: 30px;
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 1px;
-    height: 20px;
 
 }
 
+.senha{
+   border-radius: 30px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
 
-.button{
-    width: 190px;
+.nome{
+    border-radius: 30px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+
+}
+
+.telefone{
+   border-radius: 30px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+button{
+    width: 150px;
     background-color: #8D191C;
     border: none;
     color: white;
@@ -75,7 +97,6 @@ h2{
     align-content: center;
     justify-content: center;
     border-radius: 25px;
-    margin-left: 5px;
     margin-top: 20px;
     cursor: pointer;
 }
