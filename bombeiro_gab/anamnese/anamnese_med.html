@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="anamnese_med.css">
+    <title>Anamnese de Emergencia Medica</title>
+</head>
+<body>
+
+    <div class="cabecalho">
+        <img src="menu.png" width="350px" class="menu">
+    </div> <br> <br> <br> <br>
+
+    <form>
+        <br> <br> <br> <br> <br> <br>
+        <div class="texto">
+            <h2>Anamnese de Emergência Médica</h2>
+        </div> <br> <br>  
+
+        O que aconteceu? (sinais e sintomas) <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+
+        <label>Acontenceu outras vezes?</label><br>
+        <label for="sim">Sim</label>
+        <input type="radio" name="opcao1" id="sim" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
+        <br>
+        <label for="nao">Não</label>
+        <input type="radio" name="opcao1" id="nao" onclick="mostrarCaixaTexto('sim', 'textoAdicional1')">
+        <br>
+        <div id="textoAdicional1" style="display:none">
+            <label for="textoAdicional">A quanto tempo isso aconteceu?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional1" class="total">
+        </div> <br>
+
+        <label>Possui algum problema de saúde?</label><br>
+        <label for="opcaoSim2">Sim</label>
+        <input type="radio" name="opcao2" id="opcaoSim2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
+        <br>
+        <label for="opcaoNao2">Não</label>
+        <input type="radio" name="opcao2" id="opcaoNao2" onclick="mostrarCaixaTexto('opcaoSim2', 'textoAdicional2')">
+        <br>
+        <div id="textoAdicional2" style="display:none">
+            <label for="textoAdicional">Quais?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional2" class="total">
+        </div> <br>
+
+        <label>Faz uso de medicação?</label><br>
+        <label for="opcaoSim3">Sim</label>
+        <input type="radio" name="opcao3" id="opcaoSim3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
+        <br>
+        <label for="opcaoNao3">Não</label>
+        <input type="radio" name="opcao3" id="opcaoNao3" onclick="mostrarCaixaTexto('opcaoSim3', 'textoAdicional3')">
+        <br>
+        <div id="textoAdicional3" style="display:none">
+            <label for="textoAdicional">Quais?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional3" class="total">
+        </div> <br>
+
+        Horário da última medicação: <br>
+        <input type="text" name="total" maxlength="10" class="total">
+        <br> <br> 
+
+        <label>Alérgico a alguma coisa?</label><br>
+        <label for="opcaoSim4">Sim</label>
+        <input type="radio" name="opcao4" id="opcaoSim4" onclick="mostrarCaixaTexto('opcaoSim4', 'textoAdicional4')">
+        <br>
+        <label for="opcaoNao4">Não</label>
+        <input type="radio" name="opcao4" id="opcaoNao4" onclick="mostrarCaixaTexto('opcaoSim4', 'textoAdicional4')">
+        <br>
+        <div id="textoAdicional4" style="display:none">
+            <label for="textoAdicional"> Especifique:</label>
+            <input type="text" id="textoAdicional" name="textoAdicional4" class="total">
+        </div> <br>
+
+        <label>Ingeriu alimento ou líquido >6horas?</label><br>
+        <label for="opcaoSim5">Sim</label>
+        <input type="radio" name="opcao5" id="opcaoSim5" onclick="mostrarCaixaTexto('opcaoSim5', 'textoAdicional5')">
+        <br>
+        <label for="opcaoNao5">Não</label>
+        <input type="radio" name="opcao5" id="opcaoNao5" onclick="mostrarCaixaTexto('opcaoSim5', 'textoAdicional5')">
+        <br>
+        <div id="textoAdicional5" style="display:none">
+            <label for="textoAdicional">Que horas?</label>
+            <input type="text" id="textoAdicional" name="textoAdicional5" class="total">
+        </div> <br>
+
+        <button type="submit">Próximo</button>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
