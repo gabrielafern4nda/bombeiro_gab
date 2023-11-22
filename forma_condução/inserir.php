@@ -1,14 +1,19 @@
 <?php
     include("conecta.php");
-    $FK_IdOcorrencia = 21; //$_SESSION["id"];
+    $FK_IdOcorrencia = 3; //$_SESSION["id"];
 
-    $Deitada  = $_POST["Deitada"];
-    $SemiSentada  = $_POST["SemiSentada"];
-    $Sentada  = $_POST["Sentada"];
+    $Deitada = isset($_POST["Deitada"]) ? $_POST["Deitada"] : null;
+    $SemiSentada = isset($_POST["SemiSentada"]) ? $_POST["SemiSentada"] : null;
+    $Sentada = isset($_POST["Sentada"]) ? $_POST["Sentada"] : null;
 
-    $comando = $pdo->prepare("INSERT INTO forma_conducao VALUES ($FK_IdOcorrencia, $Deitada , $SemiSentada, $Sentada)");
+    $comando = $pdo->prepare("INSERT INTO forma_conducao (FK_IdOcorrencia, Deitada, SemiSentada, Sentada) VALUES (:FK_IdOcorrencia, :Deitada, :SemiSentada, :Sentada)");
+    $comando->bindParam(':FK_IdOcorrencia', $FK_IdOcorrencia);
+    $comando->bindParam(':Deitada', $Deitada);
+    $comando->bindParam(':SemiSentada', $SemiSentada);
+    $comando->bindParam(':Sentada', $Sentada);
+
+    
     $resultado = $comando->execute();
 
-    echo ("{\"resposta\":1}");
-
+    echo "{\"resposta\":1}";
 ?>
