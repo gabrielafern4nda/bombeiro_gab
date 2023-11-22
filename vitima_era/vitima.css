@@ -33,7 +33,7 @@ button {
     border: none;
     color: white;
     background: rgb(212, 31, 31);
-    background: linear-gradient(0deg, rgba(212, 31, 31, 1) 26%, rgba(141, 25, 28, 1) 100%);
+    background: linear-gradient(0deg, rgb(211, 29, 29) 26%, rgba(141, 25, 28, 1) 100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    
     text-align: center;
     font-size: 15px;

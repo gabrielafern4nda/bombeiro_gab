@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vitima.css">
     <title>Vitima era</title>
+    <script src="jquery-1.8.2.min.js"></script>
 </head>
 <body>
-
     <div class="cabecalho">
         <img src="menu.png" width="350px" class="menu">
     </div>
 
-    <form method="post">
+    <form action="inserir.php" method="post" id="form1">
         <br>
         <div class="texto">
             <h2>Vítima era:</h2>
         </div>
         
         <br> 
-        <input type="radio" id="resposta1" name="1"> <label for="resposta1">Ciclista</label><br>
-        <input type="radio" id="resposta2" name="1"> <label for="resposta2">Condutor moto</label><br>
-        <input type="radio" id="resposta3" name="1"> <label for="resposta3">Condutor carro</label><br> 
-        <input type="radio" id="resposta4" name="1"> <label for="resposta4">Clínico</label><br>
-        <input type="radio" id="resposta5" name="1"> <label for="resposta5">Gestante</label><br>
-        <input type="radio" id="resposta6" name="1"> <label for="resposta6">Trauma</label><br> 
-        <input type="radio" id="resposta7" name="1"> <label for="resposta7">Passageiro banco frente</label><br>
-        <input type="radio" id="resposta8" name="1"> <label for="resposta8">Passageiro banco trás</label><br>
-        <input type="radio" id="resposta9" name="1"> <label for="resposta9">Passageiro moto</label><br> 
-        <input type="radio" id="resposta10" name="1"> <label for="resposta10">Pedestre</label><br> <br>
-        <button type="submit">Próximo</button>
+        <input type="radio" name="ciclista" value="1"> <label>Ciclista</label><br>
+        <input type="radio" name="condutorMoto" value="1"> <label>Condutor Moto</label><br>
+        <input type="radio" name="condutorCarro" value="1"> <label>Condutor Carro</label><br>
+        <input type="radio" name="clinico" value="1"> <label>Clínico</label><br>
+        <input type="radio" name="gestante" value="1"> <label>Gestante</label><br>
+        <input type="radio" name="trauma" value="1"> <label>Trauma</label><br>
+        <input type="radio" name="passageiroBancoFrente" value="1"> <label>Passageiro Banco Frente</label><br>
+        <input type="radio" name="passageiroBancoTras" value="1"> <label>Passageiro Banco Trás</label><br>
+        <input type="radio" name="passageiroMoto" value="1"> <label>Passageiro Moto</label><br>
+        <input type="radio" name="pedestre" value="1"> <label>Pedestre</label><br>
+
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
