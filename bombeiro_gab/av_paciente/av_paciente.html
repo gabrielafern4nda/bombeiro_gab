@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,38 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="av_paciente.css">
     <title>Avaliação do Paciente</title>
-    <script src="jquery-1.8.2.min.js"></script>
+    <script>
+        function redirecionar() {
+            var escolha = document.querySelector('input[name="o"]:checked').value;
 
-    <script type="text/javascript">
-
-
-        function Inserir() {
-            var dados = $('#form1').serialize();
-
-            $.ajax({
-                type: "POST",
-                url: "inserir.php",
-                data: dados,
-                dataType: 'json',
-
-                success: function (meu_json) {
-
-                    var valores = meu_json;
-                    var resultado = valores.resultado;
-                    if (resultado == 1) {
-                        alert("Dados Gravados")
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.error('Ocorreu um erro ao enviar os dados: ' + error);
-                },
-                beforeSend: function (xhr) {
-                },
-                complete: function (xhr, status) {
-                },
-                timeout: 5000
-            });
+            if (escolha === "maiores") {
+                window.location.href = "../av_paciente2/av_paciente2.html";
+            } else if (escolha === "menores") {
+                window.location.href = "../av_paciente3/av_paciente3.html";
+            }
         }
     </script>
 </head>
@@ -47,18 +23,19 @@
         <img src="menu.png" width="350px" class="menu">
     </div>
 
-    <form action="" method="post" id="form1">
+    <form id="form1">
         <br>
         <div class="texto">
-            <h2>Avaliação do Paciente <br> Glasglow
-            </h2>
+            <h2>Avaliação do Paciente <br> Glasglow</h2>
         </div> 
-        <br> <br>
-        <strong>Nível de Consciência:</strong> <br>
-        <input type="radio" name="nivel" value="maiores"> Maiores de 5 anos <br>
-        <input type="radio" name="nivel" value="menores"> Menores de 5 anos
-    </div>
-    <input type="submit" class="button" name="enviar" value="enviar" onclick="Inserir();" />
+    <br>
+        <div class="forms">
+            <strong>Nível de Consciência:</strong> <br>
+            <input type="radio" name="o" value="maiores"> Maiores de 5 anos <br>
+            <input type="radio" name="o" value="menores"> Menores de 5 anos
+        </div>
+        
+        <input type="button" class="button" name="enviar" value="Enviar" onclick="redirecionar();" />
     </form>
 </body>
 </html>
