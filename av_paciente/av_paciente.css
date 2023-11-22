@@ -51,7 +51,7 @@ h3{
     text-align: center;
 }
 
-button {
+.button {
     width: 200px;
     height: 53px;
     border: none;
@@ -73,7 +73,7 @@ button {
     margin-top: 50px;
 }
 
-button:hover {
+.button:hover {
     background: linear-gradient(0deg, rgb(126, 18, 18) 26%, rgba(141, 25, 28, 1) 100%);
 
 }

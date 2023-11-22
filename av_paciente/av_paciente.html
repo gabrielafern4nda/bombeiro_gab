@@ -5,26 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="av_paciente.css">
-    <title>atar</title>
+    <title>Avaliação do Paciente</title>
+    <script>
+        function redirecionar() {
+            var escolha = document.querySelector('input[name="o"]:checked').value;
+
+            if (escolha === "maiores") {
+                window.location.href = "../av_paciente2/av_paciente2.html";
+            } else if (escolha === "menores") {
+                window.location.href = "../av_paciente3/av_paciente3.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="cabecalho">
         <img src="menu.png" width="350px" class="menu">
     </div>
 
-    <form method="post">
+    <form id="form1">
         <br>
         <div class="texto">
-            <h2>Avaliação do Paciente <br> Glasglow
-            </h2>
+            <h2>Avaliação do Paciente <br> Glasglow</h2>
         </div> 
-    
-    <div class="forms">
-        <strong>Nível de Consciência:</strong> <br>
-        <input type="radio" name="o"> Maiores de 5 anos <br>
-        <input type="radio" name="o"> Menores de 5 anos
-    </div>
-        <button type="submit">Próximo</button>
+    <br>
+        <div class="forms">
+            <strong>Nível de Consciência:</strong> <br>
+            <input type="radio" name="o" value="maiores"> Maiores de 5 anos <br>
+            <input type="radio" name="o" value="menores"> Menores de 5 anos
+        </div>
+        
+        <input type="button" class="button" name="enviar" value="Enviar" onclick="redirecionar();" />
     </form>
 </body>
 </html>
