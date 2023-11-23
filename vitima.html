@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vitima.css">
+    <title>Vitima era</title>
+    <script src="jquery-1.8.2.min.js"></script>
+</head>
+<body>
+    <div class="cabecalho">
+        <img src="menu.png" width="350px" class="menu">
+    </div>
+
+    <form action="inserir.php" method="post" id="form1">
+        <br>
+        <div class="texto">
+            <h2>Vítima era:</h2>
+        </div>
+        
+        <br> 
+        <input type="radio" name="ciclista" value="1"> <label>Ciclista</label><br>
+        <input type="radio" name="condutorMoto" value="1"> <label>Condutor Moto</label><br>
+        <input type="radio" name="condutorCarro" value="1"> <label>Condutor Carro</label><br>
+        <input type="radio" name="clinico" value="1"> <label>Clínico</label><br>
+        <input type="radio" name="gestante" value="1"> <label>Gestante</label><br>
+        <input type="radio" name="trauma" value="1"> <label>Trauma</label><br>
+        <input type="radio" name="passageiroBancoFrente" value="1"> <label>Passageiro Banco Frente</label><br>
+        <input type="radio" name="passageiroBancoTras" value="1"> <label>Passageiro Banco Trás</label><br>
+        <input type="radio" name="passageiroMoto" value="1"> <label>Passageiro Moto</label><br>
+        <input type="radio" name="pedestre" value="1"> <label>Pedestre</label><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
